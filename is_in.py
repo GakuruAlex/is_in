@@ -12,6 +12,8 @@ def is_in(char: str , a_str: str )-> bool:
         True
     """
     low, high = 0, len(a_str)
+    if a_str == '':
+        return False
 
     while low <= high:
         mid: int = (low + high) // 2
@@ -27,6 +29,8 @@ def is_in(char: str , a_str: str )-> bool:
 def is_in_recur(char: str, aStr: str)->bool:
     low, high = 0, len(aStr)
     mid = (high + low) // 2
+    if aStr == '':
+        return False
     if aStr[mid] == char:
         return True
     elif char < aStr[mid]:
